@@ -52,6 +52,8 @@ img {
 --text-color-black:#000000;
 --text-color-white:#fff;
 --color-blue:#00BAFC;
+--color-blue-hover:rgba(0, 186, 252, 0.8);
+--color-blue-active:rgba(0, 186, 252, 0.6);
 --color-grey:#F3F3F3;
 --color-dark:#191919;
 }
@@ -129,7 +131,7 @@ transition: all 0.3s ease;
 }
 
 .phone-link:active{
-background-color: rgba(0, 186, 252, 0.6);
+background-color: var(--color-blue-active);
 color: var(--text-color-white);
 border: 3px solid transparent;
 }
@@ -137,7 +139,7 @@ border: 3px solid transparent;
 .nav-dropdown{
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -16px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -171,7 +173,7 @@ border: 3px solid transparent;
 }
 .dropdown-link:active{
   color: var(--text-color-white);
-  background-color: rgba(0, 186, 252, 0.6);
+  background-color: var(--color-blue-active);
 }
 
 /* MAIN-hero */
@@ -213,6 +215,12 @@ font-weight: bold;
 border: 3px solid transparent;
 transition: all 0.3s ease;
 }
+.buttons:hover{
+  background-color:var(--color-blue-hover);
+}
+.buttons:active{
+  background-color: var(--color-blue-active);
+}
 
 /* SERVICES */
 .services{
@@ -233,8 +241,104 @@ margin-left: auto;
 }
 .services-content{
   margin: 0;
+  margin-bottom: 24px;
+}
+
+/* SERVICES LIST */
+.services-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.services-item{
+  display: flex;
+  width: 320px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.services-item:hover{
+  box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.1);
+}
+.services-item:active{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.services-item ~ .services-item{
+  margin-left: 70px;
+}
+
+.services-item:nth-child(4){
+  margin-top: 40px;
+}
+.services-item:nth-child(5){
+  margin-top: 40px;
+}
+.services-links{
+text-decoration: none;
+padding: 24px;
+}
+.box-title{
+  margin: 0;
+  color: var(--text-color-black);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 130%;
   margin-bottom: 16px;
 }
+.box-content{
+color: var(--text-color-black);
+margin: 0;
+}
+
+.services-links::before{
+  content: "";
+  display: block;
+  background-image: url(../img/vebsayt-tuzish.svg);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 202px;
+  height: 130px;
+  margin-bottom: 16px;
+}
+.telegram::before{
+   background-image: url(../img/telegram-bot.svg);
+ }
+.smm::before{
+    background-image: url(../img/smm.svg);
+ }
+.grap::before{
+  background-image: url(../img/grafik-dizayn.svg);
+  }
+.crm::before{
+  background-image: url(../img/crm-tizim.svg);
+}
+
+.order-button-links{
+  text-align: center;
+}
+
+.services-button-link{
+  margin-left: 16px;
+  color: var(--color-blue);
+}
+
+
+
+
+
 
 
 
