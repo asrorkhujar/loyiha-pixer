@@ -504,7 +504,7 @@ img {
   flex-direction: column;
 }
 
-.telegram::before{
+.telegram-social::before{
   content: "";
   background-image: url("../img/telegram.svg");
   background-repeat: no-repeat;
