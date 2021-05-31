@@ -486,6 +486,12 @@ img {
   margin-bottom: 8px;
   transition: color 0.3s ease;
 }
+.footer-social-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .footer-links:hover{
   color: var(--color-blue);
 }
@@ -494,9 +500,6 @@ img {
   opacity: 0.6;
 }
 
-/* .footer-list li:not(:last-child) {
-  margin-bottom: 8px;
-} */
 .social-networks{
   display: flex;
   flex-direction: column;
@@ -533,4 +536,4 @@ img {
   margin-right: 8px;
 }
 
-
+/* SERVICES PAGE - XIZMATLAR SAHIFASI */
