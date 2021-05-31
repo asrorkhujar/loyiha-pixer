@@ -88,6 +88,7 @@ img {
 }
 .site-nav-item{
   position: relative;
+  overflow: hidden;
 }
 .site-nav-link{
   font-size: 15px;
