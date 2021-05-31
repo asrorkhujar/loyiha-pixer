@@ -177,6 +177,17 @@ img {
   background-color: var(--color-blue-active);
 }
 
+.logo-img{
+  transition: opacity 0.4s ease;
+}
+.logo-img:hover{
+  opacity: 0.8;
+}
+.logo-img:active{
+  opacity: 0.4;
+}
+
+
 /* MAIN-hero */
 .site-hero{
   display: flex;
