@@ -105,7 +105,7 @@ img {
 .site-nav-link:active{
   background: rgba(25, 25, 25, 0.7);
   color: var(--text-color-white);
-  border-bottom: transparent;
+  border-bottom: 3px solid transparent;
 }
 .site-nav-item:hover .dropdown-item {
   display: block;
@@ -466,15 +466,13 @@ img {
   line-height: 130%;
   margin-bottom: 16px;
 }
-.footer-list{
-  margin: 0;
-}
 .left-side{
   width: 320px;
   margin-right: 100px;
 }
 
 .footer-list {
+  margin: 0;
   padding-left: 0;
   list-style: none;
   margin-right: 87px;
@@ -496,9 +494,9 @@ img {
   opacity: 0.6;
 }
 
-.footer-list li:not(:last-child) {
+/* .footer-list li:not(:last-child) {
   margin-bottom: 8px;
-}
+} */
 .social-networks{
   display: flex;
   flex-direction: column;
@@ -509,7 +507,6 @@ img {
   background-image: url("../img/telegram.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-repeat: ;
   display: block;
   width: 22px;
   height: 22px;
@@ -520,7 +517,7 @@ img {
   background-image: url("../img/facebook.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  display: inline-block;
+  display: block;
   width: 22px;
   height: 22px;
   margin-right: 8px;
@@ -530,7 +527,7 @@ img {
   background-image: url("../img/instagram.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  display: inline-block;
+  display:block;
   width: 22px;
   height: 22px;
   margin-right: 8px;
