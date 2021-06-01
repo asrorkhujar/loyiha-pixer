@@ -30,6 +30,7 @@ body {
   font-weight: normal;
   color: var(--text-color-black);
   background-color: #fff;
+  margin-top: 56px;
 }
 
 img {
@@ -56,11 +57,13 @@ img {
   --color-blue-active:rgba(0, 186, 252, 0.6);
   --color-grey:#F3F3F3;
   --color-dark:#191919;
+  --bg-color-f4:#F4F4F4;
 }
 
 /* HEADER */
 .site-header{
   position: fixed;
+  top: 0;
   width: 100%;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   background-color: var(--text-color-white);
@@ -88,7 +91,10 @@ img {
 }
 .site-nav-item{
   position: relative;
-  overflow: hidden;
+  }
+.site-nav-item-active .site-nav-link{
+  border-bottom: 3px solid #000;
+
 }
 .site-nav-link{
   font-size: 15px;
@@ -96,7 +102,10 @@ img {
   text-decoration: none;
   color: var(--text-color-black);
   border-bottom: 3px solid transparent;
-  padding: 16px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 13px;
   transition: all 0.3s ease ;
 }
 .site-nav-link:hover{
@@ -108,9 +117,7 @@ img {
   color: var(--text-color-white);
   border-bottom: 3px solid transparent;
 }
-.site-nav-item:hover .dropdown-item {
-  display: block;
-}
+
 .phone-link{
   text-decoration: none;
   padding: 8px 16px;
@@ -138,6 +145,7 @@ img {
 }
 
 .nav-dropdown{
+  display: none;
   position: absolute;
   top: 100%;
   left: -16px;
@@ -146,12 +154,13 @@ img {
   list-style: none;
   background-color: var(--text-color-white);
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
-  border: 1px solid transparent;
   border-radius: 5px;
+  }
+.site-nav-item:hover .nav-dropdown {
+  display: block;
 }
 
 .dropdown-item{
-  display: none;
   padding: 8px 0px;
   margin: 0;
   background-color: var(--text-color-white);
@@ -549,3 +558,113 @@ img {
 }
 
 /* SERVICES PAGE - XIZMATLAR SAHIFASI */
+.services-main-head{
+  width: 804px;
+  padding: 72px 0;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.services-head-title{
+margin: 0;
+margin-bottom: 16px;
+font-weight: bold;
+font-size: 40px;
+line-height: 130%;
+}
+.services-content{
+  margin: 0;
+}
+
+.services-content-inner{
+padding: 80px 0;
+background-color: var(--bg-color-f4);
+}
+.services-content-inner-list{
+  margin: 0;
+  padding: 0;
+  width: 804px;
+  list-style: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+.services-content-inner-item{
+  display: flex;
+  width: 804px;
+  background-color: var(--text-color-white);
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  padding: 32px;
+}
+.services-content-inner-item ~ .services-content-inner-item{
+  margin-top: 64px;
+}
+.services-content-inner-item::before{
+  content: "";
+  background-image: url("../img/vebsayt-tuzish.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 200px;
+  height: 128px;
+  margin-right: 40px;
+  flex-shrink: 0;
+}
+.services-content-inner-list .services-content-inner-item:nth-child(2)::before{
+  background-image: url("../img/telegram-bot.svg");
+}
+.services-content-inner-list .services-content-inner-item:nth-child(3)::before{
+  background-image: url("../img/smm.svg");
+}
+.services-content-inner-list .services-content-inner-item:nth-child(4)::before{
+  background-image: url("../img/grafik-dizayn.svg");
+}
+.services-content-inner-list .services-content-inner-item:nth-child(5)::before{
+  background-image: url("../img/crm-tizim.svg");
+}
+
+.services-content-inner-box{
+  width: 500px;
+}
+.services-content-inner-box-title{
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 16px;
+}
+.services-content-inner-box-content{
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.services-content-inner-box-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 16px;
+}
+.services-content-inner-box-item{
+  display: flex;
+  align-items: center;
+}
+.services-content-inner-box-item::before{
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-blue);
+  background-size: contain;
+  display: block;
+  margin-right: 8px;
+}
+
+.services-content-inner-box-item ~ .services-content-inner-box-item {
+  margin-top: 8px;
+}
+.service-order-buttons{
+  text-align: left;
+}
+
+
+
